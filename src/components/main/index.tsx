@@ -4,14 +4,12 @@ import {useEffect, useState} from "react";
 
 export const Main = () => {
    const Timer = () => {
-      const [min, setMin] = useState<number>(3);
-      const [sec, setSec] = useState<number>(0);
-      const time = useRef(180);
+      const [sec, setSec] = useState<number>(3);
+      const time = useRef(3);
       const timerId = useRef<any>(null);
 
       useEffect(() => {
          timerId.current = setInterval(() => {
-            setMin(parseInt(time.current) / 60);
             setSec(time.current % 60);
             time.current -= 1;
          }, 1000);
@@ -27,7 +25,7 @@ export const Main = () => {
       }, [sec]);
       return (
         <>
-           <div>{min}분 {sec}</div>
+           <div> {sec}초</div>
         </>
       )
    }
@@ -35,11 +33,11 @@ export const Main = () => {
    return (
      <S.Positioner>
         <Timer/>
-        <S.Wrapper>
-           <S.Text>Ayo The</S.Text>
-           <S.Title>Pizza Here 🍕</S.Title>
-           <S.Copyright>© Nayejun</S.Copyright>
-        </S.Wrapper>
+        {/*<S.Wrapper>*/}
+        {/*   <S.Text>Ayo The</S.Text>*/}
+        {/*   <S.Title>Pizza Here 🍕</S.Title>*/}
+        {/*   <S.Copyright>© Nayejun</S.Copyright>*/}
+        {/*</S.Wrapper>*/}
      </S.Positioner>
    );
 }
