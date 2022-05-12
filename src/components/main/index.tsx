@@ -18,14 +18,19 @@ export const Main = () => {
       }, []);
 
       useEffect(() => {
-         if (time.current <= 0) {
+         if (time.current == 0) {
             console.log("시간 끝");
             clearInterval(timerId.current);
          }
       }, [sec]);
+
+      if (time.current == 0) {
+         return <div>Times Over 😙</div>
+      }
+
       return (
         <>
-           <div> {sec}초</div>
+           <div>{sec}</div>
         </>
       )
    }
