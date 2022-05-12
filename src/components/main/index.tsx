@@ -2,39 +2,39 @@ import React, {useRef} from "react";
 import * as S from "./style";
 import {useEffect, useState} from "react";
 
-export const Main = () => {
-   const Timer = () => {
-      const [sec, setSec] = useState<number>(3);
-      const time = useRef(3);
-      const timerId = useRef<any>(null);
+const Timer = () => {
+   const [sec, setSec] = useState<number>(3);
+   const time = useRef(3);
+   const timerId = useRef<any>(null);
 
-      useEffect(() => {
-         timerId.current = setInterval(() => {
-            setSec(time.current % 60);
-            time.current -= 1;
-         }, 1000);
+   useEffect(() => {
+      timerId.current = setInterval(() => {
+         setSec(time.current % 60);
+         time.current -= 1;
+      }, 1000);
 
-         return () => clearTimeout(timerId.current);
-      }, []);
+      return () => clearTimeout(timerId.current);
+   }, []);
 
-      useEffect(() => {
-         if (time.current == 0) {
-            console.log("시간 끝");
-            clearInterval(timerId.current);
-         }
-      }, [sec]);
-
+   useEffect(() => {
       if (time.current == 0) {
-         return <div>Times Over 😙</div>
+         console.log("시간 끝");
+         clearInterval(timerId.current);
       }
+   }, [sec]);
 
-      return (
-        <>
-           <div>{sec}</div>
-        </>
-      )
+   if (time.current == 0) {
+      return <div>Times Over 😙</div>
    }
 
+   return (
+     <>
+        <div>{sec}</div>
+     </>
+   )
+}
+
+export const Main = () => {
    return (
      <S.Positioner>
         <Timer/>
