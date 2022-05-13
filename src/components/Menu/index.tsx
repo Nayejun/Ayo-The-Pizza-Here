@@ -3,10 +3,10 @@ import dummy from "../../utils/Menu.json";
 
 const MenuList = () => {
    return (
-     <ul className="list_day">
-        {dummy.days.map((day) => (
-          <li key={day.id}>
-             {day.day}
+     <ul className="menu_list">
+        {dummy.menus.map((menu) => (
+          <li key={menu.id}>
+             {menu.menu}
           </li>))}
      </ul>
    )
