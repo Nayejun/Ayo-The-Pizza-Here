@@ -23,3 +23,32 @@ export const Wrapper = styled(Center)`
     display: none;
   }
 `;
+export const Text = styled.p`
+  margin-top: 30vh;
+  width: 57%;
+  text-align: left;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 23px;
+  line-height: 30px;
+  color: #FF8964;
+`;
+export const Title = styled(Text)`
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-weight: 800;
+  font-size: 37px;
+  line-height: 55px;
+  color: #000000;
+`;
+export const Copyright = styled(Text)`
+  margin-top: 30vh;
+  width: 100%;
+  text-align: center;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  color: #000000;
+`;
