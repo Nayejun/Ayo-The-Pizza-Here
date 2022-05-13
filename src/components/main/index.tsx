@@ -6,7 +6,7 @@ const Main = () => {
      <>
         <S.Positioner>
            <S.Wrapper>
-              hello
+              <S.Text>오늘 먹을 메뉴는</S.Text>
            </S.Wrapper>
         </S.Positioner>
      </>
