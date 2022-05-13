@@ -19,12 +19,15 @@ export const Wrapper = styled(Center)`
   background-color: #FFFFFF;
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
+  .SubTitle {
+    font-size: 20px;
+    font-weight: 100;
+  }
 `;
 export const Text = styled.p`
-  width: 57%;
-  text-align: left;
+  text-align: center;
   font-style: normal;
-  font-weight: 200;
+  font-weight: 100;
   font-size: 23px;
   line-height: 30px;
   color: #FF8964;
@@ -35,6 +38,6 @@ export const Title = styled(Text)`
   text-align: center;
   font-weight: 800;
   font-size: 37px;
-  line-height: 55px;
+  line-height: 70px;
   color: #000000;
 `;
