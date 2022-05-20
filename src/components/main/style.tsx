@@ -21,6 +21,11 @@ export const Wrapper = styled(Center)`
   border-radius: 50px;
   
   button {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 22vh;
     height: 5.5vh;
     background: #FF8964;
@@ -31,7 +36,7 @@ export const Wrapper = styled(Center)`
     font-weight: 100;
     font-size: 17px;
     line-height: 24px;
-    margin-top: 15vh;
+    margin-top: 20vh;
     margin-bottom: -18vh;
   }
 `;
