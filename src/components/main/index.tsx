@@ -2,7 +2,7 @@ import React from "react";
 import * as S from "./style";
 import ShowRandomMenu from "../Random";
 
-const Main = () => {
+export const Main = () => {
    return (
      <>
         <S.Positioner>
@@ -15,5 +15,3 @@ const Main = () => {
      </>
    );
 }
-
-export default Main
