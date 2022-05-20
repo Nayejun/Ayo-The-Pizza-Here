@@ -29,7 +29,7 @@ export const Text = styled.p`
   text-align: left;
   font-style: normal;
   font-weight: 200;
-  font-size: 23px;
+  font-size: 1.4rem;
   line-height: 30px;
   color: #FF8964;
 `;
@@ -38,7 +38,7 @@ export const Title = styled(Text)`
   margin: 0;
   text-align: center;
   font-weight: 800;
-  font-size: 37px;
+  font-size: 2.3rem;
   line-height: 55px;
   color: #000000;
 `;
@@ -48,7 +48,7 @@ export const Copyright = styled(Text)`
   text-align: center;
   font-style: normal;
   font-weight: 200;
-  font-size: 15px;
+  font-size: 0.9rem;
   letter-spacing: 0.01em;
   color: #000000;
 `;
