@@ -24,13 +24,6 @@ export const Wrapper = styled(Center)`
     font-size: 20px;
     font-weight: 100;
   }
-
-  ul, li {
-    font-weight: 800;
-    font-size: 37px;
-    line-height: 70px;
-    color: #000000;
-  }
 `;
 export const Text = styled.p`
   text-align: center;
