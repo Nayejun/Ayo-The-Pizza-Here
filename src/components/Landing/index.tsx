@@ -1,6 +1,5 @@
 import React, {useRef, useEffect, useState} from "react";
 import * as S from "./style";
-import Main from "../Main";
 
 export const Landing = () => {
    const [sec, setSec] = useState<number>(3);
@@ -37,6 +36,5 @@ export const Landing = () => {
            </S.Positioner>
         </>
       )
-   } else
-      return <Main/>
+   }
 }
