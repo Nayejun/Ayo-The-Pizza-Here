@@ -35,7 +35,6 @@ export const Wrapper = styled(Center)`
     font-style: normal;
     font-weight: 100;
     font-size: 17px;
-    line-height: 24px;
     margin-top: 20vh;
     margin-bottom: -18vh;
   }
@@ -48,6 +47,7 @@ export const Text = styled.p`
   line-height: 30px;
   color: #FF8964;
   margin-bottom: 2vh;
+  margin-top: 2.5vh;
 `;
 export const Title = styled(Text)`
   font-size: 20px;
