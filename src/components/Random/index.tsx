@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styled from "@emotion/styled";
 
-const Print = () => {
+const ShowRandomMenu = () => {
    const MenuList = ["피자 🍕", "치킨 🍗", "햄버거 🍔", "라면 🍜", "떡볶이 🌶", "굶기 🤮"];
    const RandomMenu: any = (MenuList[Math.floor(Math.random() * MenuList.length)]);
    const [view, setView] = useState(false)
@@ -12,7 +12,6 @@ const Print = () => {
    }
 
    return <button onClick={() => setView(true)}>여기야</button>
-
 }
 
-export default Print;
+export default ShowRandomMenu;
