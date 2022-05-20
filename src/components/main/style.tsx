@@ -19,10 +19,20 @@ export const Wrapper = styled(Center)`
   background-color: #FFFFFF;
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
-
-  .SubTitle {
-    font-size: 20px;
+  
+  button {
+    width: 22vh;
+    height: 5.5vh;
+    background: #FF8964;
+    border-radius: 75px;
+    border: none;
+    color: #FFFFFF;
+    font-style: normal;
     font-weight: 100;
+    font-size: 17px;
+    line-height: 24px;
+    margin-top: 15vh;
+    margin-bottom: -18vh;
   }
 `;
 export const Text = styled.p`
@@ -32,10 +42,11 @@ export const Text = styled.p`
   font-size: 23px;
   line-height: 30px;
   color: #FF8964;
+  margin-bottom: 2vh;
 `;
 export const Title = styled(Text)`
-  font-weight: 800;
-  font-size: 37px;
-  line-height: 70px;
-  color: #000000;
+  font-size: 20px;
+  font-weight: 100;
+  color: black;
+  margin-top: 2vh;
 `;
