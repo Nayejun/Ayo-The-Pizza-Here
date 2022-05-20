@@ -19,24 +19,36 @@ export const Wrapper = styled(Center)`
   background-color: #FFFFFF;
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
+
+  @media all and (max-width: 500px) {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+
   .Hide {
     display: none;
   }
 `;
+export const TextWrapper = styled(Center)`
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+`;
 export const Text = styled.p`
   margin-top: 30vh;
-  width: 57%;
-  text-align: left;
+  width: 100%;
   font-style: normal;
   font-weight: 200;
   font-size: 1.4rem;
   line-height: 30px;
   color: #FF8964;
+  text-align: center;
 `;
 export const Title = styled(Text)`
   width: 100%;
   margin: 0;
-  text-align: center;
   font-weight: 800;
   font-size: 2.3rem;
   line-height: 55px;

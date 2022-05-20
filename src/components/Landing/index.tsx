@@ -28,8 +28,10 @@ export const Landing = () => {
         <>
            <S.Positioner>
               <S.Wrapper>
-                 <S.Text>Ayo The</S.Text>
-                 <S.Title>Pizza Here 🍕</S.Title>
+                 <S.TextWrapper>
+                    <S.Text>Ayo The</S.Text>
+                    <S.Title>Pizza Here</S.Title>
+                 </S.TextWrapper>
                  <S.Copyright>© Nayejun</S.Copyright>
               </S.Wrapper>
            </S.Positioner>
