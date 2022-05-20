@@ -1,7 +1,7 @@
 import React, {useRef, useEffect, useState} from "react";
 import * as S from "./style";
 
-export const Landing = () => {
+const Landing = () => {
    const [sec, setSec] = useState<number>(3);
    const time = useRef<number>(3);
    const timerId = useRef<any>(null);
@@ -38,3 +38,5 @@ export const Landing = () => {
       )
    }
 }
+
+export default Landing

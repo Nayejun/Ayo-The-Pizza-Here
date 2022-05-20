@@ -1,8 +1,8 @@
 import React from "react";
 import {Global} from "@emotion/react";
 import {GlobalStyles} from "../style/GlobalStyle";
-import {Landing} from "../components/Landing";
-import {Main} from "../components/Main";
+import Main from "../components/Main";
+import Landing from "../components/Landing";
 import Head from "next/head";
 
 const MyApp = () => {
