@@ -1,7 +1,6 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
 import Landing from "../components/Landing";
-import MainPage from "../components/Main";
 import {GlobalStyles} from "../style/GlobalStyle";
 import {Global} from "@emotion/react";
 
@@ -15,7 +14,6 @@ const Home: NextPage = () => {
         </Head>
         <Global styles={GlobalStyles}/>
         <Landing/>
-        <MainPage/>
      </>
    );
 }
