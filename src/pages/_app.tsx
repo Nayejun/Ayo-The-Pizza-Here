@@ -1,22 +1,12 @@
-import React from "react";
-import Head from "next/head";
-import Landing from "../components/Landing/index";
-import MainPage from "../components/Main/index";
-import {GlobalStyles} from "../style/GlobalStyle";
-import {Global} from "@emotion/react";
+import type {AppProps} from 'next/app'
 
-const MyApp = () => {
+function MyApp({Component, pageProps}: AppProps) {
    return (
      <>
-        <Head>
-           <title>A-Pizza</title>
-           <link rel="shortcut icon" href="/favicon.ico"/>
-        </Head>
-        <Landing/>
-        <MainPage/>
-        <Global styles={GlobalStyles}/>
+        <Component {...pageProps} />
      </>
-   )
+   );
+
 }
 
 export default MyApp
