@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import Landing from "../components/Landing";
-import MainPage from "../components/Main";
+import Landing from "../components/Landing/index";
+import MainPage from "../components/Main/index";
 import {GlobalStyles} from "../style/GlobalStyle";
 import {Global} from "@emotion/react";
 
