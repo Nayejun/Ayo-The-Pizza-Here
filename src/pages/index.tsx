@@ -1,9 +1,9 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
-import Landing from "../components/Landing";
 import {GlobalStyles} from "../style/GlobalStyle";
 import {Global} from "@emotion/react";
-
+import Main from "../components/Main"
+import Landing from "../components/Landing"
 const Home: NextPage = () => {
    return (
      <>
@@ -13,6 +13,7 @@ const Home: NextPage = () => {
            <link rel="icon" href="/favicon.ico"/>
         </Head>
         <Global styles={GlobalStyles}/>
+        <Main/>
         <Landing/>
      </>
    );

@@ -14,4 +14,4 @@ const ShowRandomMenu = () => {
    return <button onClick={() => setView(true)}>메뉴 정하기</button>
 }
 
-export default ShowRandomMenu;
+export default ShowRandomMenu

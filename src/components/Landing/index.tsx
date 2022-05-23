@@ -5,7 +5,7 @@ const Landing = () => {
    const [sec, setSec] = useState<number>(3);
    const time = useRef<number>(3);
    const timerId = useRef<any>(null);
-
+   
    useEffect(() => {
       timerId.current = setInterval(() => {
          setSec(time.current % 60);
@@ -39,4 +39,4 @@ const Landing = () => {
    }
 }
 
-export default Landing
+export default Landing;
