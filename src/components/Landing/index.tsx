@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
+import MainPage from "../Menu";
 import * as S from "./style";
-import * as SS from "../Menu/style";
-import ShowRandomMenu from "../Random/index";
 
 const Landing = () => {
    const [sec, setSec] = useState<number>(3);
@@ -38,18 +37,7 @@ const Landing = () => {
             </S.Positioner>
          </>
       );
-   } else
-      return (
-         <>
-            <SS.Positioner>
-               <SS.Wrapper>
-                  <SS.Text>오늘 먹을 메뉴는,</SS.Text>
-                  <ShowRandomMenu />
-                  <SS.Title>입니다.</SS.Title>
-               </SS.Wrapper>
-            </SS.Positioner>
-         </>
-      );
+   } else return <MainPage />;
 };
 
 export default Landing;
