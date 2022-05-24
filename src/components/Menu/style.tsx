@@ -7,7 +7,7 @@ export const Center = styled.div`
 `;
 export const Positioner = styled(Center)`
    width: 100%;
-   height: 100vh;
+   height: 110vh;
    color: red;
    font-size: 30px;
    background: linear-gradient(
