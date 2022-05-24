@@ -8,7 +8,7 @@ export const Center = styled.div`
 export const Positioner = styled(Center)`
    width: 100%;
    height: 100vh;
-   min-height: 100vh;
+   min-height: 90vh;
    color: red;
    font-size: 30px;
    background: linear-gradient(
@@ -21,7 +21,7 @@ export const Positioner = styled(Center)`
 export const Wrapper = styled(Center)`
    @media all and (max-width: 500px) {
       width: 100%;
-      height: 100vh;
+      height: 90vh;
       border-radius: 0;
    }
    width: 400px;

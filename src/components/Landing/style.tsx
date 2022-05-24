@@ -6,7 +6,7 @@ export const Center = styled.div`
    align-items: center;
 `;
 export const Positioner = styled(Center)`
-   min-height: 100vh;
+   min-height: 90vh;
    width: 100%;
    height: 100vh;
    color: red;
@@ -28,7 +28,7 @@ export const Wrapper = styled(Center)`
 
    @media all and (max-width: 500px) {
       width: 100%;
-      height: 100vh;
+      height: 90vh;
       border-radius: 0;
    }
 
