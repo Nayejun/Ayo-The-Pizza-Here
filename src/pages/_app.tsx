@@ -3,6 +3,7 @@ import { Global } from "@emotion/react";
 import { GlobalStyles } from "../style/GlobalStyle";
 import Landing from "../components/Landing/index";
 import Head from "next/head";
+import MainPage from "../components/Menu";
 
 const MyApp = () => {
    return (
@@ -13,6 +14,7 @@ const MyApp = () => {
          </Head>
          <Global styles={GlobalStyles} />
          <Landing />
+         <MainPage />
       </>
    );
 };

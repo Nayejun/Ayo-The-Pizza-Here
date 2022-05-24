@@ -2,8 +2,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { GlobalStyles } from "../style/GlobalStyle";
 import { Global } from "@emotion/react";
-import MainPage from "../components/Menu/index";
-import Landing from "../components/Landing";
 const Home: NextPage = () => {
    return (
       <>
