@@ -2,7 +2,7 @@ import React from "react";
 import { Global } from "@emotion/react";
 import { GlobalStyles } from "../style/GlobalStyle";
 import Landing from "../components/Landing/index";
-import Main from "../components/Main/index";
+import MainPage from "../components/Main/index";
 import Head from "next/head";
 
 const MyApp = () => {
@@ -14,7 +14,7 @@ const MyApp = () => {
          </Head>
          <Global styles={GlobalStyles} />
          <Landing />
-         <Main />
+         <MainPage />
       </>
    );
 };
