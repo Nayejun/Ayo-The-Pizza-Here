@@ -20,7 +20,7 @@ export const Positioner = styled(Center)`
 export const Wrapper = styled(Center)`
    @media all and (max-width: 500px) {
       width: 100%;
-      height: 100%;
+      height: 100vh;
       border-radius: 0;
    }
    width: 400px;
