@@ -13,6 +13,10 @@ const MyApp = () => {
             <link rel="shortcut icon" href="/favicon.ico" />
             <meta name="viewport" content="width=device-width" />
             <meta content="yes" name="apple-mobile-web-app-capable" />
+            <meta
+               name="viewport"
+               content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+            />
          </Head>
          <Global styles={GlobalStyles} />
          <Landing />
