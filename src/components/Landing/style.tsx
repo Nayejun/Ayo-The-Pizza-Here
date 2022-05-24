@@ -21,7 +21,7 @@ export const Wrapper = styled(Center)`
    width: 400px;
    height: 750px;
    flex-direction: column;
-   background-color: #ffffff;
+   background-color: #000000;
    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
    border-radius: 50px;
 
