@@ -6,9 +6,9 @@ export const Center = styled.div`
    align-items: center;
 `;
 export const Positioner = styled(Center)`
-   position: fixed;
    width: 100%;
    height: 100vh;
+   min-height: 100vh;
    color: red;
    font-size: 30px;
    background: linear-gradient(

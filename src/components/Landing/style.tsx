@@ -6,7 +6,7 @@ export const Center = styled.div`
    align-items: center;
 `;
 export const Positioner = styled(Center)`
-   position: fixed;
+   min-height: 100vh;
    width: 100%;
    height: 100vh;
    color: red;
