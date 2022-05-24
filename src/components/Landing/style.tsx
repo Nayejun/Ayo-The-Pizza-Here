@@ -27,7 +27,7 @@ export const Wrapper = styled(Center)`
 
    @media all and (max-width: 500px) {
       width: 100%;
-      height: 110vh;
+      height: 100%;
       border-radius: 0;
    }
 
