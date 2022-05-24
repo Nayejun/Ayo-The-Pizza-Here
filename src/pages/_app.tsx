@@ -11,6 +11,8 @@ const MyApp = () => {
          <Head>
             <title>A-Pizza</title>
             <link rel="shortcut icon" href="/favicon.ico" />
+            <meta name="viewport" content="width=device-width" />
+            <meta content="yes" name="apple-mobile-web-app-capable" />
          </Head>
          <Global styles={GlobalStyles} />
          <Landing />
