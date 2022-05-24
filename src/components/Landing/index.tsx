@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import MainPage from "../Menu";
-import * as S from "./style";
+import LandingUI from "./landing";
 
 const Landing = () => {
    const [sec, setSec] = useState<number>(3);
@@ -24,19 +24,7 @@ const Landing = () => {
    }, [sec]);
 
    if (time.current == 3) {
-      return (
-         <>
-            <S.Positioner>
-               <S.Wrapper>
-                  <S.TextWrapper>
-                     <S.Text>Ayo The</S.Text>
-                     <S.Title>Pizza Here</S.Title>
-                  </S.TextWrapper>
-                  <S.Copyright>© Nayejun</S.Copyright>
-               </S.Wrapper>
-            </S.Positioner>
-         </>
-      );
+      return <LandingUI />;
    } else return <MainPage />;
 };
 
