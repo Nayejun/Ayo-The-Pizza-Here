@@ -18,7 +18,8 @@ export const Positioner = styled(Center)`
       rgba(255, 152, 220, 0.175) 100%
    );
    @media all and (max-width: 500px) {
-      height: 90vh;
+      /* height: 90vh; */
+      height: 100vh;
    }
 `;
 export const Wrapper = styled(Center)`
@@ -31,7 +32,8 @@ export const Wrapper = styled(Center)`
 
    @media all and (max-width: 500px) {
       width: 100%;
-      height: 90vh;
+      /* height: 90vh; */
+      height: 100vh;
       border-radius: 0;
    }
 
