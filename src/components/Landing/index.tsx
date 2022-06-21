@@ -18,7 +18,6 @@ const Landing = () => {
 
   useEffect(() => {
     if (time.current == 0) {
-      console.log("시간 끝, 화면전환");
       clearInterval(timerId.current);
     }
   }, [sec]);

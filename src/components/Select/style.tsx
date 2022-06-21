@@ -33,6 +33,13 @@ export const Wrapper = styled(Center)`
   background-color: #ffffff;
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
+
+  .Btn1 {
+    margin-bottom: 2vh;
+  }
+  .Btn2 {
+    margin-top: 2vh;
+  }
 `;
 export const Button = styled.button`
   width: 22vh;
