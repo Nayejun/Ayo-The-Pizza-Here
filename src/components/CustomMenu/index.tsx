@@ -1,8 +1,14 @@
 import React from "react";
-import { Positioner } from "./style";
+import * as S from "./style";
 
 const CustomMenu = () => {
-  return <Positioner>hello</Positioner>;
+  return (
+    <S.Positioner>
+      <S.Wrapper>
+        <S.Input maxLength={10} />
+      </S.Wrapper>
+    </S.Positioner>
+  );
 };
 
 export default CustomMenu;
