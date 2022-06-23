@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Positioner } from "./style";
 
-const ShowRandomMenu = () => {
+function ShowRandomMenu() {
   const [menu, setMenu] = useState([
     "피자 🍕",
     "치킨 🍗",
@@ -19,6 +19,6 @@ const ShowRandomMenu = () => {
   }
 
   return <button onClick={() => setView(true)}>메뉴 정하기</button>;
-};
+}
 
 export default ShowRandomMenu;

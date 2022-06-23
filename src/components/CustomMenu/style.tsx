@@ -39,6 +39,39 @@ export const Input = styled.input`
   text-align: center;
   font-size: 2rem;
   border-radius: 75px;
-  border: 2px solid #ff8964;
+  border: none;
   outline: none;
+`;
+export const Button = styled.button`
+  width: 22vh;
+  height: 5.5vh;
+  background: #ff8964;
+  border-radius: 75px;
+  border: none;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 0.8rem;
+  margin-top: 3vh;
+`;
+export const RandomMenu = styled.p`
+  font-weight: 800;
+  font-size: 37px;
+  margin-bottom: 3vh;
+`;
+export const Text = styled.p`
+  text-align: center;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1.5rem;
+  line-height: 30px;
+  color: #ff8964;
+  margin-bottom: 3vh;
+  margin-top: 15vh;
+`;
+export const Title = styled.p`
+  font-size: 1.25rem;
+  font-weight: 100;
+  color: black;
+  margin-bottom: 10vh;
 `;
