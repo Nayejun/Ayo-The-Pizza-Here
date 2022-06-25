@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import CreateMenu from "./CreateMenu";
-import { Positioner } from "./style";
+import * as S from "./style";
 
 function CustomMenu() {
   const [menus, setMenus] = useState<any>([
@@ -73,11 +73,17 @@ function CustomMenu() {
   };
 
   return (
-    <div>
-      <CreateMenu name={name} onDataChange={onDataChange} onCreate={onCreate} />
-      <button onClick={RandomMenu}>메뉴 정하기</button>
-      {random}
-    </div>
+    <S.Positioner>
+      <S.Wrapper>
+        <CreateMenu
+          name={name}
+          onDataChange={onDataChange}
+          onCreate={onCreate}
+        />
+        <S.Button onClick={RandomMenu}>메뉴 정하기</S.Button>
+        {random}
+      </S.Wrapper>
+    </S.Positioner>
   );
 }
 

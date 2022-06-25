@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./style";
 import MainPage from "../Menu";
-import CustomMenuMap from "../CustomMenuMap";
+import CustomMenu from "../CustomMenu/CustomMenu";
 
 function Select() {
   const [state, setState] = useState<number>(0);
@@ -18,7 +18,7 @@ function Select() {
     return <MainPage />;
   } else if (state == 2) {
     console.log("Custom Menu");
-    return <CustomMenuMap />;
+    return <CustomMenu />;
   } else {
     return (
       <S.Positioner>

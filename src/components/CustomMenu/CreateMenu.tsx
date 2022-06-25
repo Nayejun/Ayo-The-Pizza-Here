@@ -1,4 +1,5 @@
 import React from "react";
+import * as S from "./style";
 
 interface Props {
   name: any;
@@ -8,10 +9,10 @@ interface Props {
 
 const CreateMenu: React.FC<Props> = ({ name, onCreate, onDataChange }) => {
   return (
-    <div>
-      <input type="text" name="name" onChange={onDataChange} value={name} />
-      <button onClick={onCreate}>Add</button>
-    </div>
+    <>
+      <S.Input type="text" name="name" onChange={onDataChange} value={name} />
+      <S.Button onClick={onCreate}>메뉴 추가하기</S.Button>
+    </>
   );
 };
 
