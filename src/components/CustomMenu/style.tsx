@@ -5,6 +5,13 @@ export const Center = styled.div`
   justify-content: center;
   align-items: center;
 `;
+export const ShowMenu = styled.p`
+  font-weight: 800;
+  font-size: 37px;
+  line-height: 70px;
+  color: #000000;
+  margin-bottom: 3.5vh;
+`;
 export const RandomMenuWrapper = styled(Center)`
   flex-direction: column;
 `;

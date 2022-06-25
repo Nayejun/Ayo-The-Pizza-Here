@@ -6,41 +6,17 @@ function CustomMenu() {
   const [menus, setMenus] = useState<any>([
     {
       id: 1,
-      name: "피자",
-    },
-    {
-      id: 2,
-      name: "치킨",
-    },
-    {
-      id: 3,
-      name: "떡볶이",
-    },
-    {
-      id: 4,
-      name: "라면",
-    },
-    {
-      id: 5,
-      name: "햄버거",
-    },
-    {
-      id: 6,
-      name: "족발",
-    },
-    {
-      id: 7,
-      name: "굶기",
+      name: "굶기 🤮",
     },
   ]);
-
-  const nextId = useRef(8);
-
   const [inputs, setInputs] = useState({
     name: "",
   });
-
+  const [random, setRandom] = useState("");
+  const [nextPage, setNextPage] = useState<number>(0);
+  const nextId = useRef(1);
   const { name } = inputs;
+  const length = menus.length;
 
   const onDataChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
@@ -62,25 +38,15 @@ function CustomMenu() {
       name: "",
     });
     nextId.current += 1;
+    if (name == "") {
+      alert("메뉴를 입력해주세요.");
+    }
   };
-
-  const [random, setRandom] = useState("");
-  const length = menus.length;
 
   const RandomMenu = () => {
     setRandom(menus[Math.floor(Math.random() * length)].name);
     console.log(random);
   };
-
-  const NextPage = () => {
-    return (
-      <S.RandomMenuWrapper>
-        {random}
-        <S.Button onClick={RandomMenu}>메뉴 정하기</S.Button>
-      </S.RandomMenuWrapper>
-    );
-  };
-  const [nextPage, setNextPage] = useState<number>(0);
 
   const ShowRandomMenu = () => {
     setNextPage(1);
@@ -91,7 +57,9 @@ function CustomMenu() {
       <S.Positioner>
         <S.Wrapper>
           <S.RandomMenuWrapper>
-            {random}
+            <S.Text>오늘 먹을 메뉴는,</S.Text>
+            <S.ShowMenu>{random}</S.ShowMenu>
+            <S.Title>입니다.</S.Title>
             <S.Button onClick={RandomMenu}>메뉴 정하기</S.Button>
           </S.RandomMenuWrapper>
         </S.Wrapper>
