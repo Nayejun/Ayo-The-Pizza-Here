@@ -75,13 +75,18 @@ function CustomMenu() {
   return (
     <S.Positioner>
       <S.Wrapper>
-        <CreateMenu
-          name={name}
-          onDataChange={onDataChange}
-          onCreate={onCreate}
-        />
-        <S.Button onClick={RandomMenu}>메뉴 정하기</S.Button>
-        {random}
+        <S.RandomMenuInput>
+          <CreateMenu
+            name={name}
+            onDataChange={onDataChange}
+            onCreate={onCreate}
+          />
+          <S.Button onClick={onCreate}>메뉴 추가하기</S.Button>
+        </S.RandomMenuInput>
+        <S.RandomMenuWrapper>
+          {random}
+          <S.Button onClick={RandomMenu}>메뉴 정하기</S.Button>
+        </S.RandomMenuWrapper>
       </S.Wrapper>
     </S.Positioner>
   );
