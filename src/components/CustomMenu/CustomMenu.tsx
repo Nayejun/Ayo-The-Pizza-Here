@@ -3,7 +3,7 @@ import CreateMenu from "./CreateMenu";
 import * as S from "./style";
 
 function CustomMenu() {
-  const [menus, setMenus] = useState<any>([
+  const [menus, setMenus] = useState([
     {
       id: 1,
       name: "굶기 🤮",
@@ -15,8 +15,8 @@ function CustomMenu() {
   const [random, setRandom] = useState("");
   const [nextPage, setNextPage] = useState<number>(0);
   const nextId = useRef(1);
-  const { name } = inputs;
   const length = menus.length;
+  const { name } = inputs;
 
   const onDataChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
@@ -85,3 +85,6 @@ function CustomMenu() {
 }
 
 export default CustomMenu;
+function setMenus(arg0: { id: number; name: string }[]) {
+  throw new Error("Function not implemented.");
+}
