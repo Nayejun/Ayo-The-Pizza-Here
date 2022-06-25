@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
-import Student from "./MenuList";
-import CreateStudent from "./CreateMenu";
+import MenuList from "./MenuList";
+import CreateMenu from "./CreateMenu";
 
 function CustomMenu() {
-  const [students, setStudents] = useState<any>([
+  const [menus, setMenus] = useState<any>([
     {
       id: 1,
       name: "피자",
@@ -52,11 +52,11 @@ function CustomMenu() {
   };
 
   const onCreate = () => {
-    const student = {
-      id: "st00" + nextId.current,
+    const menu = {
+      id: 1 + nextId.current,
       name,
     };
-    setStudents([...students, student]);
+    setMenus([...menus, menu]);
 
     setInputs({
       name: "",
@@ -66,13 +66,9 @@ function CustomMenu() {
 
   return (
     <div>
-      <CreateStudent
-        name={name}
-        onDataChange={onDataChange}
-        onCreate={onCreate}
-      />
-      {students.map((student: { id: React.Key | null | undefined }) => (
-        <Student student={student} key={student.id} />
+      <CreateMenu name={name} onDataChange={onDataChange} onCreate={onCreate} />
+      {menus.map((menu: { id: React.Key | null | undefined }) => (
+        <MenuList menu={menu} key={menu.id} />
       ))}
     </div>
   );

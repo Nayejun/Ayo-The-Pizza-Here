@@ -6,7 +6,7 @@ interface Props {
   onCreate: any;
 }
 
-const CreateStudent: React.FC<Props> = ({ name, onCreate, onDataChange }) => {
+const CreateMenu: React.FC<Props> = ({ name, onCreate, onDataChange }) => {
   return (
     <div>
       <input type="text" name="name" onChange={onDataChange} value={name} />
@@ -15,4 +15,4 @@ const CreateStudent: React.FC<Props> = ({ name, onCreate, onDataChange }) => {
   );
 };
 
-export default CreateStudent;
+export default CreateMenu;
