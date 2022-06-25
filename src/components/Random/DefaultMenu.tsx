@@ -9,6 +9,7 @@ function ShowRandomMenu() {
     "라면 🍜",
     "떡볶이 🌶",
     "굶기 🤮",
+    "족발 🐷",
   ]);
   const RandomMenu: any = menu[Math.floor(Math.random() * menu.length)];
   const [view, setView] = useState<boolean>(false);
