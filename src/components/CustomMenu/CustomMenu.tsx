@@ -72,24 +72,48 @@ function CustomMenu() {
     console.log(random);
   };
 
-  return (
-    <S.Positioner>
-      <S.Wrapper>
-        <S.RandomMenuInput>
-          <CreateMenu
-            name={name}
-            onDataChange={onDataChange}
-            onCreate={onCreate}
-          />
-          <S.Button onClick={onCreate}>메뉴 추가하기</S.Button>
-        </S.RandomMenuInput>
-        <S.RandomMenuWrapper>
-          {random}
-          <S.Button onClick={RandomMenu}>메뉴 정하기</S.Button>
-        </S.RandomMenuWrapper>
-      </S.Wrapper>
-    </S.Positioner>
-  );
+  const NextPage = () => {
+    return (
+      <S.RandomMenuWrapper>
+        {random}
+        <S.Button onClick={RandomMenu}>메뉴 정하기</S.Button>
+      </S.RandomMenuWrapper>
+    );
+  };
+  const [nextPage, setNextPage] = useState<number>(0);
+
+  const ShowRandomMenu = () => {
+    setNextPage(1);
+  };
+
+  if (nextPage == 1) {
+    return (
+      <S.Positioner>
+        <S.Wrapper>
+          <S.RandomMenuWrapper>
+            {random}
+            <S.Button onClick={RandomMenu}>메뉴 정하기</S.Button>
+          </S.RandomMenuWrapper>
+        </S.Wrapper>
+      </S.Positioner>
+    );
+  } else {
+    return (
+      <S.Positioner>
+        <S.Wrapper>
+          <S.RandomMenuInput>
+            <CreateMenu
+              name={name}
+              onDataChange={onDataChange}
+              onCreate={onCreate}
+            />
+            <S.Button onClick={onCreate}>메뉴 추가하기</S.Button>
+            <S.Button onClick={ShowRandomMenu}>완료</S.Button>
+          </S.RandomMenuInput>
+        </S.Wrapper>
+      </S.Positioner>
+    );
+  }
 }
 
 export default CustomMenu;
