@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import LandingUI from "./landing";
-import Select from "../Select";
+import Select from "../ModeSelect";
 
 const Landing = () => {
   const [sec, setSec] = useState<number>(3);

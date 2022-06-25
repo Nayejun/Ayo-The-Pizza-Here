@@ -18,7 +18,7 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.fontSize": 17,
+  "editor.fontSize": 18,
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "*": true,

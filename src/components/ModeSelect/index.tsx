@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./style";
 import MainPage from "../Menu";
-import CustomMenu from "../CustomMenu";
+import CustomMenu from "../CustomMenu/CustomMenu";
 
 function Select() {
   const [state, setState] = useState<number>(0);
