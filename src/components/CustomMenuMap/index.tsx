@@ -1,5 +1,5 @@
 import React from "react";
-import ShowRandomMenu from "../Random/DefaultMenu";
+import CustomMenu from "../CustomMenu/CustomMenu";
 import * as S from "./style";
 
 const MainPage = () => {
@@ -8,7 +8,7 @@ const MainPage = () => {
       <S.Positioner>
         <S.Wrapper>
           <S.Text>오늘 먹을 메뉴는,</S.Text>
-          <ShowRandomMenu />
+          <CustomMenu />
           <S.Title>입니다.</S.Title>
         </S.Wrapper>
       </S.Positioner>

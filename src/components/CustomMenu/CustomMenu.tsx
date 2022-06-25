@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import MenuList from "./MenuList";
 import CreateMenu from "./CreateMenu";
+import { Positioner } from "./style";
 
 function CustomMenu() {
   const [menus, setMenus] = useState<any>([
@@ -64,12 +65,27 @@ function CustomMenu() {
     nextId.current += 1;
   };
 
+  const [textValue, setTextValue] = useState("");
+  const length = menus.length;
+  const changeTextValue = () => {
+    setTextValue(menus[Math.floor(Math.random() * length)].name);
+    console.log(textValue);
+  };
+
+  const [view, setView] = useState<boolean>(false);
+
+  if (view == true) {
+    console.log("true");
+    return <Positioner>{textValue}</Positioner>;
+  }
+
   return (
     <div>
       <CreateMenu name={name} onDataChange={onDataChange} onCreate={onCreate} />
       {menus.map((menu: { id: React.Key | null | undefined }) => (
         <MenuList menu={menu} key={menu.id} />
       ))}
+      <button onClick={changeTextValue}>메뉴 정하기</button>;
     </div>
   );
 }
