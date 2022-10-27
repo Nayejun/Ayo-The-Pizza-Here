@@ -55,6 +55,9 @@ export const Input = styled.input`
   border-radius: 75px;
   border: none;
   outline: none;
+  ::placeholder {
+    font-size: 0.8rem;
+  }
 `;
 export const Button = styled.button`
   width: 22vh;

@@ -21,7 +21,6 @@ function CustomMenu() {
 
   const onDataChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
-
     setInputs({
       ...inputs,
       [name]: value,
@@ -87,6 +86,3 @@ function CustomMenu() {
 }
 
 export default CustomMenu;
-function setMenus(arg0: { id: number; name: string }[]) {
-  throw new Error("Function not implemented.");
-}
