@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import BackToFirstPageButton from "../BackToFirstPage";
 import CreateMenu from "./CreateMenu";
 import * as S from "./style";
 
@@ -45,43 +46,44 @@ function CustomMenu() {
 
   const RandomMenu = () => {
     setRandom(menus[Math.floor(Math.random() * length)].name);
-    console.log(random);
   };
 
   const ShowRandomMenu = () => {
     setNextPage(1);
   };
 
-  if (nextPage == 1) {
-    return (
-      <S.Positioner>
-        <S.Wrapper>
-          <S.RandomMenuWrapper>
-            <S.Text>오늘 먹을 메뉴는,</S.Text>
-            <S.ShowMenu>{random}</S.ShowMenu>
-            <S.Title>입니다.</S.Title>
-            <S.Button onClick={RandomMenu}>메뉴 정하기</S.Button>
-          </S.RandomMenuWrapper>
-        </S.Wrapper>
-      </S.Positioner>
-    );
-  } else {
-    return (
-      <S.Positioner>
-        <S.Wrapper>
-          <S.RandomMenuInput>
-            <CreateMenu
-              name={name}
-              onDataChange={onDataChange}
-              onCreate={onCreate}
-            />
-            <S.Button onClick={onCreate}>메뉴 추가하기</S.Button>
-            <S.Button onClick={ShowRandomMenu}>완료</S.Button>
-          </S.RandomMenuInput>
-        </S.Wrapper>
-      </S.Positioner>
-    );
-  }
+  return (
+    <>
+      {nextPage ? (
+        <S.Positioner>
+          <S.Wrapper>
+            <S.RandomMenuWrapper>
+              <S.Text>오늘 먹을 메뉴는,</S.Text>
+              <S.ShowMenu>{random}</S.ShowMenu>
+              <S.Title>입니다.</S.Title>
+              <S.Button onClick={RandomMenu}>메뉴 정하기</S.Button>
+              <BackToFirstPageButton />
+            </S.RandomMenuWrapper>
+          </S.Wrapper>
+        </S.Positioner>
+      ) : (
+        <S.Positioner>
+          <S.Wrapper>
+            <S.RandomMenuInput>
+              <CreateMenu
+                name={name}
+                onDataChange={onDataChange}
+                onCreate={onCreate}
+              />
+              <S.Button onClick={onCreate}>메뉴 추가하기</S.Button>
+              <S.Button onClick={ShowRandomMenu}>완료</S.Button>
+              <BackToFirstPageButton />
+            </S.RandomMenuInput>
+          </S.Wrapper>
+        </S.Positioner>
+      )}
+    </>
+  );
 }
 
 export default CustomMenu;

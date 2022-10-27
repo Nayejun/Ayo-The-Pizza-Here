@@ -4,20 +4,18 @@ import MainPage from "../Menu";
 import CustomMenu from "../CustomMenu/CustomMenu";
 
 function Select() {
-  const [state, setState] = useState<number>(0);
+  const [mode, setMode] = useState<number>(0);
 
   const SelectMode1 = () => {
-    setState(1);
+    setMode(1);
   };
   const SelectMode2 = () => {
-    setState(2);
+    setMode(2);
   };
 
-  if (state == 1) {
-    console.log("Default Menu");
+  if (mode === 1) {
     return <MainPage />;
-  } else if (state == 2) {
-    console.log("Custom Menu");
+  } else if (mode === 2) {
     return <CustomMenu />;
   } else {
     return (

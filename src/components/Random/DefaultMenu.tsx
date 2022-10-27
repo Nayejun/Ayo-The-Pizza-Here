@@ -14,8 +14,7 @@ function ShowRandomMenu() {
   const RandomMenu: any = menu[Math.floor(Math.random() * menu.length)];
   const [view, setView] = useState<boolean>(false);
 
-  if (view == true) {
-    console.log("true");
+  if (view === true) {
     return <Positioner>{RandomMenu}</Positioner>;
   }
 

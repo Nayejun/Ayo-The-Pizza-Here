@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import BackToFirstPageButton from "../BackToFirstPage";
 import * as S from "../CustomMenu/style";
 
 const MainPage = () => {
@@ -49,7 +50,6 @@ const MainPage = () => {
 
   const RandomMenu = () => {
     setRandom(menus[Math.floor(Math.random() * length)].name);
-    console.log(random);
   };
 
   return (
@@ -60,6 +60,7 @@ const MainPage = () => {
           <S.ShowMenu>{random}</S.ShowMenu>
           <S.Title>입니다.</S.Title>
           <S.Button onClick={RandomMenu}>메뉴 정하기</S.Button>
+          <BackToFirstPageButton />
         </S.RandomMenuWrapper>
       </S.Wrapper>
     </S.Positioner>
